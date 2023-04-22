@@ -14,6 +14,9 @@
 		8C682AB329F356C40084DAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C682AB229F356C40084DAC8 /* Assets.xcassets */; };
 		8C682AB629F356C40084DAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C682AB429F356C40084DAC8 /* LaunchScreen.storyboard */; };
 		8C91D67629F35AA600F33FDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91D67529F35AA600F33FDA /* Constants.swift */; };
+		8C91D67829F35B3C00F33FDA /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91D67729F35B3C00F33FDA /* NetworkLayer.swift */; };
+		8C91D67A29F35BE200F33FDA /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91D67929F35BE200F33FDA /* NewsAPI.swift */; };
+		8C91D67C29F35F0B00F33FDA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91D67B29F35F0B00F33FDA /* News.swift */; };
 		B44C9F5EF6DF6D9D06976E44 /* Pods_MVCNewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE242694216B45788B13817F /* Pods_MVCNewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		8C682AB529F356C40084DAC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C682AB729F356C40084DAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C91D67529F35AA600F33FDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8C91D67729F35B3C00F33FDA /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		8C91D67929F35BE200F33FDA /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		8C91D67B29F35F0B00F33FDA /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CE242694216B45788B13817F /* Pods_MVCNewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVCNewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +92,7 @@
 		8C682ABF29F358A30084DAC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C91D67B29F35F0B00F33FDA /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 		8C682AC229F358B50084DAC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8C91D67729F35B3C00F33FDA /* NetworkLayer.swift */,
+				8C91D67929F35BE200F33FDA /* NewsAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -273,9 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C91D67A29F35BE200F33FDA /* NewsAPI.swift in Sources */,
 				8C91D67629F35AA600F33FDA /* Constants.swift in Sources */,
 				8C682AAE29F356C30084DAC8 /* ViewController.swift in Sources */,
 				8C682AAA29F356C30084DAC8 /* AppDelegate.swift in Sources */,
+				8C91D67C29F35F0B00F33FDA /* News.swift in Sources */,
+				8C91D67829F35B3C00F33FDA /* NetworkLayer.swift in Sources */,
 				8C682AAC29F356C30084DAC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
