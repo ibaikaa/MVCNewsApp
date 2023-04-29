@@ -12,22 +12,30 @@ final class NetworkLayer {
     private init () { }
     
     private let provider = MoyaProvider<NewsAPI>()
+    private var decoder = JSONDecoder()
     
-    public func fetchNews() {
-        provider.request(.topHeadlines) { result in
+    private func decode<T: Decodable>(type: T.Type, data: Data) throws -> T {
+         try decoder.decode(type, from: data)
+    }
+    
+    public func fetchNews(completion: @escaping (Result<News, Error>) -> Void) {
+        provider.request(.topHeadlines) { [weak self] result in
+            guard let `self` = self else { return }
+            
             switch result {
             case .success(let response):
                 do {
-                    print(response.debugDescription)
-                    let news = try JSONDecoder().decode(News.self, from: response.data)
-                    print(news)
+                    let news = try self.decode(type: News.self, data: response.data)
+                    completion(.success(news))
                 } catch {
-                    print(error.localizedDescription)
+                    completion(.failure(error))
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                completion(.failure(error))
             }
         }
     }
+    
+   
     
 }

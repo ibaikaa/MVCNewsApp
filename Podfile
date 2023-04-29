@@ -9,6 +9,9 @@ target 'MVCNewsApp' do
   
   # For working with network
   pod 'Moya'
+  
+  # To install image from URL easily
+  pod 'Kingfisher'
 
 
   # Fixing bug
