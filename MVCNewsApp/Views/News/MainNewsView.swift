@@ -36,6 +36,7 @@ final class MainNewsView: UIViewController {
         refreshControl.endRefreshing()
     }
     
+    
     private var loadingIndicator = UIActivityIndicatorView()
     
     private func setupLoadingIndicator() {
@@ -58,6 +59,30 @@ final class MainNewsView: UIViewController {
         loadingIndicator.stopAnimating()
     }
     
+    private var noNewsFoundView = NoNewsFoundView()
+    
+    private func setupNoNewsFoundView() {
+        noNewsFoundView.isHidden = true
+        noNewsFoundView.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(noNewsFoundView)
+        
+        let noNewsFoundViewConstraints = [
+            noNewsFoundView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            noNewsFoundView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            noNewsFoundView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            noNewsFoundView.heightAnchor.constraint(equalTo: noNewsFoundView.widthAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(noNewsFoundViewConstraints)
+    }
+    
+    public func showNoNewsFoundView() {
+        noNewsFoundView.isHidden = false
+        noNewsFoundView.setupDescription(noNewsFoundFor: countryTextField.text ?? "us")
+        newsTableView.isHidden = true
+    }
+    
     // MARK: - Private methods
     private func configureController() {
         controller = MainNewsController(view: self)
@@ -76,6 +101,14 @@ final class MainNewsView: UIViewController {
         newsTableView.refreshControl = refreshControl
     }
     
+    public func scrollToTop() {
+        newsTableView.scrollToRow(
+            at: IndexPath(row: 0, section: 0),
+            at: .top,
+            animated: true
+        )
+    }
+    
     private func callApi() {
         controller?.fetchNews(for: countryTextField.text ?? "us")
     }
@@ -83,6 +116,8 @@ final class MainNewsView: UIViewController {
     // MARK: - Public methods
     public func reloadDataForNewsTableView() {
         newsTableView.reloadData()
+        newsTableView.isHidden = false
+        noNewsFoundView.isHidden = true
     }
     
     // MARK: - UIViewController Life Cycle
@@ -90,6 +125,7 @@ final class MainNewsView: UIViewController {
         super.viewDidLoad()
         configureController()
         setupLoadingIndicator()
+        setupNoNewsFoundView()
         configurePickerView()
         configureNewsTableView()
         countryTextField.text = controller?.defaultTitleForRow()

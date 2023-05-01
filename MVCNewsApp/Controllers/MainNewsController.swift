@@ -18,6 +18,7 @@ final class MainNewsController {
     private var articles = [Article]() {
         didSet {
             vc?.reloadDataForNewsTableView()
+            !articles.isEmpty ? vc?.scrollToTop() : vc?.showNoNewsFoundView()
         }
     }
     

@@ -20,6 +20,8 @@
 		8C91D67C29F35F0B00F33FDA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91D67B29F35F0B00F33FDA /* News.swift */; };
 		8CBD4B022A0004EB00DFE8B5 /* UIImageView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B012A0004EB00DFE8B5 /* UIImageView+CornerRadius.swift */; };
 		8CBD4B042A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B032A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift */; };
+		8CBD4B072A00641D00DFE8B5 /* NewsDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B062A00641D00DFE8B5 /* NewsDetailedView.swift */; };
+		8CBD4B0A2A0069A900DFE8B5 /* NoNewsFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B092A0069A900DFE8B5 /* NoNewsFoundView.swift */; };
 		8CE6419E29F45E9700B0F555 /* SupportedCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6419D29F45E9700B0F555 /* SupportedCountries.swift */; };
 		8CE641A029F4642400B0F555 /* MainNewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6419F29F4642400B0F555 /* MainNewsController.swift */; };
 		8CE641A229F4687800B0F555 /* AlertShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE641A129F4687800B0F555 /* AlertShower.swift */; };
@@ -47,6 +49,8 @@
 		8C91D67B29F35F0B00F33FDA /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8CBD4B012A0004EB00DFE8B5 /* UIImageView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CornerRadius.swift"; sourceTree = "<group>"; };
 		8CBD4B032A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ScaleAspectFill.swift"; sourceTree = "<group>"; };
+		8CBD4B062A00641D00DFE8B5 /* NewsDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailedView.swift; sourceTree = "<group>"; };
+		8CBD4B092A0069A900DFE8B5 /* NoNewsFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNewsFoundView.swift; sourceTree = "<group>"; };
 		8CE6419D29F45E9700B0F555 /* SupportedCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountries.swift; sourceTree = "<group>"; };
 		8CE6419F29F4642400B0F555 /* MainNewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsController.swift; sourceTree = "<group>"; };
 		8CE641A129F4687800B0F555 /* AlertShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShower.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		8C682AC029F358A80084DAC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CBD4B082A00697800DFE8B5 /* CustomUI */,
+				8CBD4B052A00626A00DFE8B5 /* NewsDetailed */,
 				8C91D67229F359AC00F33FDA /* News */,
 				8C682AC529F358D70084DAC8 /* Storyboards */,
 			);
@@ -179,6 +185,22 @@
 				8C682AAD29F356C30084DAC8 /* MainNewsView.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		8CBD4B052A00626A00DFE8B5 /* NewsDetailed */ = {
+			isa = PBXGroup;
+			children = (
+				8CBD4B062A00641D00DFE8B5 /* NewsDetailedView.swift */,
+			);
+			path = NewsDetailed;
+			sourceTree = "<group>";
+		};
+		8CBD4B082A00697800DFE8B5 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				8CBD4B092A0069A900DFE8B5 /* NoNewsFoundView.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		8CE6419B29F45E8300B0F555 /* DTOs */ = {
@@ -339,7 +361,9 @@
 				8C77CAB029FDCA8000787DD6 /* UIViewController+Instantiate.swift in Sources */,
 				8C91D67629F35AA600F33FDA /* Constants.swift in Sources */,
 				8C682AAE29F356C30084DAC8 /* MainNewsView.swift in Sources */,
+				8CBD4B072A00641D00DFE8B5 /* NewsDetailedView.swift in Sources */,
 				8CE641A029F4642400B0F555 /* MainNewsController.swift in Sources */,
+				8CBD4B0A2A0069A900DFE8B5 /* NoNewsFoundView.swift in Sources */,
 				8C682AAA29F356C30084DAC8 /* AppDelegate.swift in Sources */,
 				8CBD4B022A0004EB00DFE8B5 /* UIImageView+CornerRadius.swift in Sources */,
 				8CE641A529F4693A00B0F555 /* UITextField+Toolbar.swift in Sources */,
