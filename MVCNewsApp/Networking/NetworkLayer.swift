@@ -18,8 +18,8 @@ final class NetworkLayer {
          try decoder.decode(type, from: data)
     }
     
-    public func fetchNews(completion: @escaping (Result<News, Error>) -> Void) {
-        provider.request(.topHeadlines) { [weak self] result in
+    public func fetchNews(for country: String, completion: @escaping (Result<News, Error>) -> Void) {
+        provider.request(.topHeadlinesForCountry(named: country)) { [weak self] result in
             guard let `self` = self else { return }
             
             switch result {
@@ -35,7 +35,5 @@ final class NetworkLayer {
             }
         }
     }
-    
-   
     
 }

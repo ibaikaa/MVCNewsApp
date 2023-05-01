@@ -8,7 +8,6 @@
 import Foundation
 
 enum SupportedCountries: String, CaseIterable {
-    case all = "🗺️ All"
     case ar = "🇦🇷 Argentina"
     case au = "🇦🇺 Australia"
     case at = "🇦🇹 Austria"

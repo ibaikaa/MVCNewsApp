@@ -25,9 +25,37 @@ final class MainNewsView: UIViewController {
     
     @objc
     func refresh(_ sender: UIRefreshControl) {
-        print("CALL API")
-        newsTableView.reloadData()
-        sender.endRefreshing()
+        controller?.refreshNewsOnPull(for: countryTextField.text ?? "us")
+    }
+    
+    public func beginRefreshing() {
+        refreshControl.beginRefreshing()
+    }
+    
+    public func endRefreshing() {
+        refreshControl.endRefreshing()
+    }
+    
+    private var loadingIndicator = UIActivityIndicatorView()
+    
+    private func setupLoadingIndicator() {
+        view.addSubview(loadingIndicator)
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        let loadingIndicatorConstraints = [
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(loadingIndicatorConstraints)
+    }
+    
+    public func showLoadingIndicator() {
+        loadingIndicator.startAnimating()
+    }
+    
+    public func dismissLoadingIndicator() {
+        loadingIndicator.stopAnimating()
     }
     
     // MARK: - Private methods
@@ -49,7 +77,7 @@ final class MainNewsView: UIViewController {
     }
     
     private func callApi() {
-        controller?.getArticles()
+        controller?.fetchNews(for: countryTextField.text ?? "us")
     }
     
     // MARK: - Public methods
@@ -61,6 +89,7 @@ final class MainNewsView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureController()
+        setupLoadingIndicator()
         configurePickerView()
         configureNewsTableView()
         countryTextField.text = controller?.defaultTitleForRow()
@@ -103,6 +132,7 @@ extension MainNewsView: UIPickerViewDelegate {
         inComponent component: Int
     ) {
         countryTextField.text = controller?.titleForRow(row)
+        controller?.fetchNews(for: countryTextField.text ?? "us")
     }
     
 }
@@ -136,7 +166,6 @@ extension MainNewsView: UITableViewDataSource {
         
         return cell
     }
-    
     
 }
 

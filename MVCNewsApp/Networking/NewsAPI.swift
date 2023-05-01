@@ -8,7 +8,7 @@
 import Moya
 
 enum NewsAPI: TargetType {
-    case topHeadlines
+    case topHeadlinesForCountry(named: String)
     case everything
     
     var baseURL: URL {
@@ -17,7 +17,7 @@ enum NewsAPI: TargetType {
     
     var path: String {
         switch self {
-        case .topHeadlines:
+        case .topHeadlinesForCountry:
             return "top-headlines"
         case .everything:
             return "everything"
@@ -26,7 +26,7 @@ enum NewsAPI: TargetType {
     
     var method: Method {
         switch self {
-        case .topHeadlines:
+        case .topHeadlinesForCountry:
             return .get
         case .everything:
             return .get
@@ -35,8 +35,11 @@ enum NewsAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .topHeadlines:
-            return .requestParameters(parameters: ["country": "us"], encoding: URLEncoding.default)
+        case .topHeadlinesForCountry(named: let country):
+            return .requestParameters(
+                parameters: ["country": country],
+                encoding: URLEncoding.default
+            )
         case .everything:
             return .requestParameters(parameters: ["q": "apple"], encoding: URLEncoding.default)
         }
@@ -47,3 +50,5 @@ enum NewsAPI: TargetType {
     }
     
 }
+
+
