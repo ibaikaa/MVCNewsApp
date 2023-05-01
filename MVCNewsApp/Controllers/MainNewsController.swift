@@ -21,7 +21,7 @@ final class MainNewsController {
         }
     }
     
-    // MARK: - Private methods
+    // MARK: - Public methods
     public func getArticles() {
         networkLayer.fetchNews { result in
             switch result {
@@ -38,8 +38,8 @@ final class MainNewsController {
     }
     
     // MARK: - For UIPickerView
-    
     // Number of rows for CountryPickerView
+    public func defaultTitleForRow() -> String { allCountries[0].rawValue } // 🗺️ All
     public func numberOfRowsForPickerView() -> Int { allCountries.count }
     public func titleForRow(_ row: Int) -> String { allCountries[row].rawValue }
     
@@ -48,7 +48,5 @@ final class MainNewsController {
     /// Number of rows for NewsTableView
     public func numberOfRows() -> Int { articles.count }
     public func articleForRow(at indexPath: IndexPath) -> Article { articles[indexPath.row] }
-    
-    
     
 }

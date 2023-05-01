@@ -49,6 +49,7 @@ final class MainNewsView: UIViewController {
         configureController()
         configurePickerView()
         configureNewsTableView()
+        countryTextField.text = controller?.defaultTitleForRow()
         callApi()
     }
 
