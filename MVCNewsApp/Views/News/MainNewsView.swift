@@ -13,8 +13,22 @@ final class MainNewsView: UIViewController {
     
     // MARK: - UI-components
     @IBOutlet private weak var countryTextField: UITextField!
-    private var countryPickerView = UIPickerView()
     @IBOutlet private weak var newsTableView: UITableView!
+    
+    private var countryPickerView = UIPickerView()
+    
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        return refreshControl
+    }()
+    
+    @objc
+    func refresh(_ sender: UIRefreshControl) {
+        print("CALL API")
+        newsTableView.reloadData()
+        sender.endRefreshing()
+    }
     
     // MARK: - Private methods
     private func configureController() {
@@ -30,8 +44,8 @@ final class MainNewsView: UIViewController {
     private func configureNewsTableView() {
         newsTableView.dataSource = self
         newsTableView.delegate = self
-        
         newsTableView.register(NewsCell.nib, forCellReuseIdentifier: NewsCell.identifier)
+        newsTableView.refreshControl = refreshControl
     }
     
     private func callApi() {
