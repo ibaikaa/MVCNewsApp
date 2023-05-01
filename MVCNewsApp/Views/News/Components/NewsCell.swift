@@ -14,21 +14,20 @@ class NewsCell: UITableViewCell {
     
     @IBOutlet weak var newsPictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var datePublishedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setupCell(with article: Article) {
-        
         newsPictureImageView.kf.setImage(
             with: URL(string: article.urlToImage ?? ""),
-            placeholder: UIImage(systemName: "doc.text")
+            placeholder: UIImage(named: "newsIcon")
         )
         
         titleLabel.text = article.title
-        descriptionLabel.text = article.description
+        datePublishedLabel.text = article.publishedAt
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

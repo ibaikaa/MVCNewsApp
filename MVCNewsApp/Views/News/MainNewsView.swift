@@ -130,8 +130,6 @@ extension MainNewsView: UITableViewDelegate {
     func tableView(
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
-    ) -> CGFloat {
-        300
-    }
+    ) -> CGFloat { 200 }
     
 }
