@@ -62,5 +62,9 @@ enum SupportedCountries: String, CaseIterable {
     case gb = "🇬🇧 United Kingdom"
     case us = "🇺🇸 United States"
     case ve = "🇻🇪 Venezuela"
+    
+    static func getCountryRawValueForDefault(default country: SupportedCountries) -> String {
+        country.rawValue
+    }
 }
 

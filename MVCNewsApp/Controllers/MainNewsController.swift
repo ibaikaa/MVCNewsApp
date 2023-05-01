@@ -90,7 +90,10 @@ final class MainNewsController {
     
     // MARK: - For UIPickerView
     // Number of rows for CountryPickerView
-    public func defaultTitleForRow() -> String { allCountries[0].rawValue }
+    public func defaultTitleForRow() -> String {
+        SupportedCountries.getCountryRawValueForDefault(default: .us)
+    }
+    
     public func numberOfRowsForPickerView() -> Int { allCountries.count }
     public func titleForRow(_ row: Int) -> String { allCountries[row].rawValue }
     
