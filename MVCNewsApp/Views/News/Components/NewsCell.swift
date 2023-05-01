@@ -16,10 +16,6 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datePublishedLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func setupCell(with article: Article) {
         newsPictureImageView.kf.setImage(
             with: URL(string: article.urlToImage ?? ""),
