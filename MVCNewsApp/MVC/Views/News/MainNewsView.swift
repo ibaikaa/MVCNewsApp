@@ -212,4 +212,23 @@ extension MainNewsView: UITableViewDelegate {
         heightForRowAt indexPath: IndexPath
     ) -> CGFloat { 200 }
     
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        let vc = NewsDetailedView.instantiate()
+        
+        if let article = controller?.articleForRow(at: indexPath) {
+            vc.setArticle(article: article)
+        } else {
+            AlertShower.showAlert(
+                title: "Error",
+                message: "Cant load data. Try again later.",
+                for: self
+            )
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

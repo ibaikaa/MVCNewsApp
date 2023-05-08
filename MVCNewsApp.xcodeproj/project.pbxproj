@@ -22,6 +22,9 @@
 		8CBD4B042A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B032A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift */; };
 		8CBD4B072A00641D00DFE8B5 /* NewsDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B062A00641D00DFE8B5 /* NewsDetailedView.swift */; };
 		8CBD4B0A2A0069A900DFE8B5 /* NoNewsFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD4B092A0069A900DFE8B5 /* NoNewsFoundView.swift */; };
+		8CD69D7D2A097ADE00B9DCF2 /* NewsDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD69D7C2A097ADE00B9DCF2 /* NewsDetailedController.swift */; };
+		8CD69D7F2A0980AC00B9DCF2 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD69D7E2A0980AC00B9DCF2 /* UIView+CornerRadius.swift */; };
+		8CD69D812A09826D00B9DCF2 /* SafariOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD69D802A09826D00B9DCF2 /* SafariOpener.swift */; };
 		8CE6419E29F45E9700B0F555 /* SupportedCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6419D29F45E9700B0F555 /* SupportedCountries.swift */; };
 		8CE641A029F4642400B0F555 /* MainNewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6419F29F4642400B0F555 /* MainNewsController.swift */; };
 		8CE641A229F4687800B0F555 /* AlertShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE641A129F4687800B0F555 /* AlertShower.swift */; };
@@ -51,6 +54,9 @@
 		8CBD4B032A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ScaleAspectFill.swift"; sourceTree = "<group>"; };
 		8CBD4B062A00641D00DFE8B5 /* NewsDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailedView.swift; sourceTree = "<group>"; };
 		8CBD4B092A0069A900DFE8B5 /* NoNewsFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNewsFoundView.swift; sourceTree = "<group>"; };
+		8CD69D7C2A097ADE00B9DCF2 /* NewsDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailedController.swift; sourceTree = "<group>"; };
+		8CD69D7E2A0980AC00B9DCF2 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		8CD69D802A09826D00B9DCF2 /* SafariOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariOpener.swift; sourceTree = "<group>"; };
 		8CE6419D29F45E9700B0F555 /* SupportedCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedCountries.swift; sourceTree = "<group>"; };
 		8CE6419F29F4642400B0F555 /* MainNewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsController.swift; sourceTree = "<group>"; };
 		8CE641A129F4687800B0F555 /* AlertShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShower.swift; sourceTree = "<group>"; };
@@ -101,13 +107,11 @@
 		8C682AA829F356C30084DAC8 /* MVCNewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				8C682AC129F358AE0084DAC8 /* Controllers */,
+				8CD69D7B2A097A7C00B9DCF2 /* MVC */,
 				8CE641A329F4693000B0F555 /* Extensions */,
 				8C682AC329F358BB0084DAC8 /* Helpers */,
-				8C682ABF29F358A30084DAC8 /* Models */,
 				8C682AC229F358B50084DAC8 /* Networking */,
 				8C682AC429F358C20084DAC8 /* Supporting files */,
-				8C682AC029F358A80084DAC8 /* Views */,
 			);
 			path = MVCNewsApp;
 			sourceTree = "<group>";
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				8CE6419F29F4642400B0F555 /* MainNewsController.swift */,
+				8CD69D7C2A097ADE00B9DCF2 /* NewsDetailedController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			children = (
 				8CE641A129F4687800B0F555 /* AlertShower.swift */,
 				8C91D67529F35AA600F33FDA /* Constants.swift */,
+				8CD69D802A09826D00B9DCF2 /* SafariOpener.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -161,10 +167,10 @@
 		8C682AC429F358C20084DAC8 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				8C682AA929F356C30084DAC8 /* AppDelegate.swift */,
-				8C682AB229F356C40084DAC8 /* Assets.xcassets */,
+				8C860F282A01885900EC217C /* Delegates */,
 				8C682AB729F356C40084DAC8 /* Info.plist */,
-				8C682AAB29F356C30084DAC8 /* SceneDelegate.swift */,
+				8C860F2A2A01886E00EC217C /* Localization */,
+				8C860F292A01886900EC217C /* Resources */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -176,6 +182,30 @@
 				8C682AB429F356C40084DAC8 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C860F282A01885900EC217C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8C682AA929F356C30084DAC8 /* AppDelegate.swift */,
+				8C682AAB29F356C30084DAC8 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8C860F292A01886900EC217C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C682AB229F356C40084DAC8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C860F2A2A01886E00EC217C /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		8C91D67229F359AC00F33FDA /* News */ = {
@@ -203,6 +233,16 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
+		8CD69D7B2A097A7C00B9DCF2 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				8C682ABF29F358A30084DAC8 /* Models */,
+				8C682AC029F358A80084DAC8 /* Views */,
+				8C682AC129F358AE0084DAC8 /* Controllers */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
 		8CE6419B29F45E8300B0F555 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +258,7 @@
 				8C77CAAF29FDCA8000787DD6 /* UIViewController+Instantiate.swift */,
 				8CBD4B012A0004EB00DFE8B5 /* UIImageView+CornerRadius.swift */,
 				8CBD4B032A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift */,
+				8CD69D7E2A0980AC00B9DCF2 /* UIView+CornerRadius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,13 +403,16 @@
 				8C91D67629F35AA600F33FDA /* Constants.swift in Sources */,
 				8C682AAE29F356C30084DAC8 /* MainNewsView.swift in Sources */,
 				8CBD4B072A00641D00DFE8B5 /* NewsDetailedView.swift in Sources */,
+				8CD69D7D2A097ADE00B9DCF2 /* NewsDetailedController.swift in Sources */,
 				8CE641A029F4642400B0F555 /* MainNewsController.swift in Sources */,
 				8CBD4B0A2A0069A900DFE8B5 /* NoNewsFoundView.swift in Sources */,
 				8C682AAA29F356C30084DAC8 /* AppDelegate.swift in Sources */,
 				8CBD4B022A0004EB00DFE8B5 /* UIImageView+CornerRadius.swift in Sources */,
 				8CE641A529F4693A00B0F555 /* UITextField+Toolbar.swift in Sources */,
+				8CD69D812A09826D00B9DCF2 /* SafariOpener.swift in Sources */,
 				8C91D67C29F35F0B00F33FDA /* News.swift in Sources */,
 				8CE6419E29F45E9700B0F555 /* SupportedCountries.swift in Sources */,
+				8CD69D7F2A0980AC00B9DCF2 /* UIView+CornerRadius.swift in Sources */,
 				8CBD4B042A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift in Sources */,
 				8C91D67829F35B3C00F33FDA /* NetworkLayer.swift in Sources */,
 				8CE641A929F46B7B00B0F555 /* NewsCell.swift in Sources */,
@@ -402,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -462,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
