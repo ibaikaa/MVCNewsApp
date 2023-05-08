@@ -167,7 +167,6 @@
 			children = (
 				8C860F282A01885900EC217C /* Delegates */,
 				8C682AB729F356C40084DAC8 /* Info.plist */,
-				8C860F2A2A01886E00EC217C /* Localization */,
 				8C860F292A01886900EC217C /* Resources */,
 			);
 			path = "Supporting files";
@@ -197,13 +196,6 @@
 				8C682AB229F356C40084DAC8 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		8C860F2A2A01886E00EC217C /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		8C91D67229F359AC00F33FDA /* News */ = {
