@@ -130,6 +130,7 @@ final class MainNewsView: UIViewController {
         configureNewsTableView()
         countryTextField.text = controller?.defaultTitleForRow()
         callApi()
+        navigationItem.title = "All news around the world 🌎"
     }
 
 }

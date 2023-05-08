@@ -57,7 +57,7 @@ final class NoNewsFoundView: UIView {
     }
     
     public func setupDescription(noNewsFoundFor country: String) {
-        noNewsFoundLabel.text = "Нет новостей из страны \"\(country)\" \(country) пока что 😔. Загляните чуть позже!"
+        noNewsFoundLabel.text = "No news found for \(country) \(country) yet 😔. Try again later!"
     }
 
 }
