@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C624BEB2A09880100DFC44C /* SearchNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C624BEA2A09880100DFC44C /* SearchNewsView.swift */; };
 		8C682AAA29F356C30084DAC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C682AA929F356C30084DAC8 /* AppDelegate.swift */; };
 		8C682AAC29F356C30084DAC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C682AAB29F356C30084DAC8 /* SceneDelegate.swift */; };
 		8C682AAE29F356C30084DAC8 /* MainNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C682AAD29F356C30084DAC8 /* MainNewsView.swift */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		1B95C535F59159C34160976A /* Pods-MVCNewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCNewsApp.debug.xcconfig"; path = "Target Support Files/Pods-MVCNewsApp/Pods-MVCNewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		88DF5FBF8656303246889B59 /* Pods-MVCNewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCNewsApp.release.xcconfig"; path = "Target Support Files/Pods-MVCNewsApp/Pods-MVCNewsApp.release.xcconfig"; sourceTree = "<group>"; };
-		8C624BEA2A09880100DFC44C /* SearchNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewsView.swift; sourceTree = "<group>"; };
 		8C682AA629F356C30084DAC8 /* MVCNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C682AA929F356C30084DAC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C682AAB29F356C30084DAC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,14 +84,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8C624BE92A0987F500DFC44C /* SearchNews */ = {
-			isa = PBXGroup;
-			children = (
-				8C624BEA2A09880100DFC44C /* SearchNewsView.swift */,
-			);
-			path = SearchNews;
-			sourceTree = "<group>";
-		};
 		8C682A9D29F356C30084DAC8 = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +126,6 @@
 		8C682AC029F358A80084DAC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8C624BE92A0987F500DFC44C /* SearchNews */,
 				8CBD4B082A00697800DFE8B5 /* CustomUI */,
 				8CBD4B052A00626A00DFE8B5 /* NewsDetailed */,
 				8C91D67229F359AC00F33FDA /* News */,
@@ -410,7 +399,6 @@
 				8CE641A529F4693A00B0F555 /* UITextField+Toolbar.swift in Sources */,
 				8CD69D812A09826D00B9DCF2 /* SafariOpener.swift in Sources */,
 				8C91D67C29F35F0B00F33FDA /* News.swift in Sources */,
-				8C624BEB2A09880100DFC44C /* SearchNewsView.swift in Sources */,
 				8CE6419E29F45E9700B0F555 /* SupportedCountries.swift in Sources */,
 				8CD69D7F2A0980AC00B9DCF2 /* UIView+CornerRadius.swift in Sources */,
 				8CBD4B042A00053B00DFE8B5 /* UIImageView+ScaleAspectFill.swift in Sources */,
